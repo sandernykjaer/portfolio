@@ -1,0 +1,24 @@
+[{
+    "name": "one",
+    "img": "bg-image-3.jpg"
+},
+{
+    "name": "two",
+    "img": "board-game-finder.jpg"  
+},
+{
+    "name": "three",
+    "img": "bg-image-2.png"
+},
+{
+    "name": "four",
+    "img": "bg-image.png"
+},
+{
+    "name": "five",
+    "img": "#"
+},
+{
+    "name": "six",
+    "img": "#"
+}]

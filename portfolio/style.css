@@ -1,0 +1,376 @@
+/*********** GENERAL STYLING ***********/
+
+:root {
+  --main-color: rgb(218, 24, 98);
+}
+
+html {
+  font-family: "Raleway", serif;
+  color: rgb(245, 245, 245);
+}
+
+.navigation {
+  width: 100%;
+  margin-top: 50px;
+  position: fixed;
+  z-index: 15;
+  background: none;
+  overflow: hidden;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+  padding: 14px 16px;
+  font-size: 1.2rem;
+  color: rgb(236, 236, 236);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(236, 236, 236);
+}
+
+a:hover {
+  transition: 0.3s;
+  color: var(--main-color);
+}
+
+.content {
+  height: 100vh;
+  background: rgb(20, 13, 49);
+  background: linear-gradient(23deg, rgb(39, 43, 54) 0%, rgb(21, 23, 31) 100%);
+}
+
+.mySlides {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  filter: brightness(50%);
+  transition: opacity 1.5s ease-in;
+}
+
+.vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 1000px rgba(0, 0, 0, 1) inset;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 10;
+  width: 60%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+/*********** INDEX STYLING ***********/
+
+.index {
+  text-align: center;
+}
+
+.index h1 {
+  font-size: 5rem;
+  padding-top: 200px;
+}
+.index h2 {
+  font-size: 2.14rem;
+  padding-top: 5px;
+}
+
+.index button {
+  margin-top: 300px;
+  font-size: 1rem;
+  padding: 12px 24px;
+  background: none;
+  color: rgb(245, 245, 245);
+  border: 1px solid rgb(245, 245, 245);
+  border-radius: 2px;
+}
+
+.index button:hover {
+  transition: 0.5s;
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+}
+
+.index button:hover p {
+  transition: 0.5s;
+  color: var(--main-color);
+}
+
+/*********** PROJECTS STYLING ***********/
+
+.project-container {
+  margin: 0 auto;
+  width: 100%;
+  height: 1000px;
+  padding-top: 160px;
+}
+
+#projects {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px;
+}
+
+.portfolio-item {
+  background-color: chocolate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+.portfolio-item.one,
+.portfolio-item.three {
+  grid-row: span 6;
+  grid-column: span 1;
+}
+
+.portfolio-item.two {
+  grid-row: span 5;
+  grid-column: span 1;
+}
+
+.portfolio-item.four {
+  grid-row: span 7;
+  grid-column: span 1;
+}
+
+.portfolio-item.five {
+  grid-row: span 6;
+  grid-column: span 1;
+}
+
+.portfolio-item.six {
+  grid-row: span 6;
+  grid-column: span 1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  top: 160px;
+  left: 75px;
+  width: 90%;
+  height: 700px;
+  border-radius: 2px;
+  background-color: rgb(0, 0, 0, 0.9);
+  box-shadow: 0px 0px 40px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modalGrid {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.modalGrid p {
+  width: 80%;
+  padding-left: 45px;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.modal h2 {
+  font-size: 3rem;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.modalItemOne {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.modalItemTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+.close {
+  position: fixed;
+  z-index: 10;
+  color: white;
+  width: 50px;
+  height: 50px;
+  z-index: 50;
+  top: 185px;
+  right: 130px;
+  font-size: 2em;
+}
+
+.close:hover {
+  cursor: pointer;
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+.portfolio-item:hover {
+  box-shadow: inset 0px 0px 500px 140px rgba(0, 0, 0, 0.75);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.portfolio-item:hover p {
+  color: white;
+  transition: 0.8s;
+}
+
+/*********** SLIDESHOW STYLING *******/
+
+.mySlideshow {
+  display: none;
+  width: 80%;
+  height: 100%;
+}
+
+.mySlideshow img {
+  padding-top: 50px;
+  width: 100%;
+  height: 600px;
+  object-fit: scale-down;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 26px 22px;
+  margin-top: -22px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 8px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 180px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 600px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*********** ABOUT STYLING ***********/
+
+.aboutGrid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  height: 60%;
+  padding-top: 150px;
+}
+
+.aboutGridOne {
+  padding-right: 40px;
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.aboutGridTwo {
+  padding-right: 100px;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.aboutGridTwo img {
+  width: 60%;
+  margin: auto 0;
+  padding-left: 90px;
+  padding-top: 40px;
+}
+
+.aboutGridThree {
+  padding-left: 90px;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.aboutGridFour {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.about h2 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+
+.about h3 {
+  font-size: 1.25rem;
+}
+
+.about p {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  line-height: 16px;
+}
+
+.about a {
+  color: rgb(218, 24, 98);
+}
